@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      fieldset {
+        width: 35%;
+      }
+
+      body {
+        font-weight: bold;
+        font-size: 1.2em;
+      }
+
+      button:hover {
+        cursor: pointer;
+        padding: 20px;
+      }
+
+      header,footer {
+        position: relative;
+          width: 100%;
+            display: flex;
+            background-color: grey;
+            color: white;
+            position: sticky;
+            top: 0px;
+        }
+
+        footer h1 {
+          position: relative;
+          left: 43%;
+          margin-right: 20px;
+          top: -20px;
+        }
+
+        i {
+          position: relative;
+          left: 30.3%;
+          margin-right: 20px;
+          top: 50px;
+          color: black;
+          font-size: 90px;
+
+        }
+
+        i:hover {
+          cursor: pointer;
+        }
+
+        hr{
+          background-image: url(MicrosoftTeams-image.png); height: 10px;
+        }
+
+        header a {
+        position: relative;
+        left: 65%;
+        color: white;
+        margin-right: 20px;
+        top: 37px;
+        font-size: 100%;
+      }
+
+    </style>
+
+    <script>
+      let confirmMessage = confirm("Would You like to take a Short Quiz?");
+      if (confirmMessage) {
+        var score = 0;
+
+        var Q1 = prompt("Enter a number between 1 and 100 that is divisible by 3, 5, 10, and 15:");
+        if (Q1 >= 15 && Q1 % 30 === 15 || Q1 >= 30 && Q1 % 30 === 0 || Q1 >= 90 && 90 === 0) {
+          alert("Correct ! :) +1 point !" );
+          score++;
+        }
+        else {
+          alert("Incorrect :(");
+        }
+
+      var Q2 = prompt("What element does 'O' represent in the periodic table?");
+      if(Q2 == "Oxygen" || Q2 == "oxygen" || Q2 == "OXYGEN") {
+        alert("Correct ! :) +1 point !");
+        score++;
+      }
+      else {
+        alert("Incorrect :(");
+      }
+
+      var Q3 = prompt("What is the Capital of Italy?");
+      if(Q3 == "Rome" || Q3 == "rome" || Q3 == "ROME") {
+        alert("Correct ! :) +1 point !");
+        score++;
+      }
+      else {
+        alert("Incorrect :(");
+      }
+
+      var Q4 = prompt("How many Continents are there?");
+      if(Q4 == "Seven" || Q4 == "seven" || Q4 == "SEVEN" || Q4 == 7) {
+        alert("Correct ! :) +1 point !");
+        score++;
+      }
+      else if(Q4 == "Six" || Q4 == "six" || Q4 == "SIX" || Q4 == 6 || Q4 == "Eeight" || Q4 == "eight" || Q4 == "EIGHT" || Q4 == 8) {
+      score = score + 0.5;
+      alert("Close Enough -_- + 0.5 points !");
+      }
+      else {
+        alert("Incorrect :(");
+      }
+
+      alert("You've scored: " + score + " Out of 4 Questions !");
+      
+      if(score >= 2) {
+        alert("Congratulations You passed the quiz ! :)")
+      }
+      else {
+        alert("Sorry You failed the quiz. :(")
+      }
+      } 
+      else {
+        alert("Fine, you can continue :(")
+      }
+    </script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<header>
+  <h1>&nbsp;ELearning System </h1>
+  <a href="E-Learning.html">Return to main page</a>
+</header>
+
+<hr>
+
+    <title>Sign Up</title>
+  </head>
+
+  <fieldset>
+    <legend>𝓢𝓲𝓰𝓷 𝓤𝓹 𝓕𝓸𝓻𝓶</legend>
+
+    <body>
+        <form action="Courses.html">
+            <p>
+              <label for="name">First Name:</label>
+              <input
+                type="text"
+                id="name"
+                placeholder="Enter Your First Name."
+                required
+              />
+              </p>
+
+              <p>
+              <label for="name">Last Name:</label>
+              <input
+                 type="text"
+                 id="name"
+                 placeholder="Enter Your Last Name."
+                 required
+                />
+              </p>
+
+            <p>
+              <label for="phone">Phone Number:</label>
+              <input
+                 type="tel"
+                 name=""
+                 id="phone"
+                 placeholder="Example: 123-456-7890"
+                 pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                 required
+                 oninvalid="this.setCustomValidity('Please enter a valid phone number. Example: 123-456-7890')"
+                 oninput="this.setCustomValidity('')"
+                />
+              </p>
+
+            <p>
+              <label for="email">Email:</label>
+              <input
+                 type="email"
+                 name="email"
+                 id="email"
+                 placeholder="Enter Your Email."
+                 required
+                />
+              </p>
+
+            <p>
+              <label for="password">Password:</label>
+              <input
+                 type="password"
+                 name=""
+                 id="password"
+                 placeholder="Enter Your Password"
+                 required
+                />
+              </p>
+
+            <p>
+              <label for="radio">Gender:</label>
+              <br>
+                <input type="radio" name="gender" value="female" required />
+                <label for="">Female</label>
+                <input type="radio" name="gender" value="male" required />
+                <label for="">Male</label>
+                <input type="radio" name="gender" value="other" required />
+                <label for="">Other</label>
+              </p>
+
+              <p>
+                <label for="role">Your Role:</label>
+                <select name="role" id="" required>
+                  <option value="Student" required>Student</option>
+                  <option value="Teacher" required>Teacher</option>
+                  <option value="Employee" required>Employee</option>
+                  <option value="Manager" required>Manager</option>
+                </select>
+              </p>
+
+              <p>
+                <label for="linkedin-url">LinkedIn Profile</label>
+                <input
+                  type="url"
+                  id="linkedin-url"
+                  name="linkedin-url"
+                  placeholder="https://example.com"
+                  oninvalid="this.setCustomValidity('Please enter a valid LinkedIn URL. Type/Example: https:/example.com')"
+                  oninput="this.setCustomValidity('')"
+                  required
+                />
+              </p>
+
+              <p>
+                <label for="courses"
+                  >Enter the number of courses you are interested in:</label>
+                <input
+                  type="number"
+                  id="courses"
+                  name="courses"
+                  placeholder="1-4"
+                  min="1"
+                  max="4"
+                  required
+                />
+              </p>
+
+              <p>
+                <label for="bdate">Birth Date:</label>
+                <input
+                  type="date"
+                  id="bdate"
+                  name="bdate"
+                  placeholder="03/28/2023"
+                  required
+                />
+              </p>
+
+              <p>
+                <a href="Courses.html">
+                  <button type="submit">Submit</button>
+                </a>
+              </p>
+              
+              
+    </body>
+  </fieldset>
+
+  <hr>
+
+  <footer>
+    <h1>&copy; to author</h1>
+    <i style="font-size:24px" class="fa">&#xf09a;</i>
+    <i style="font-size:24px" class="fa">&#xf09b;</i>
+    <i style="font-size:24px" class="fa">&#xf08c;</i>
+    <i style="font-size:24px" class="fa">&#xf099;</i>
+   </footer>
+</html>
